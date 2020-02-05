@@ -1,10 +1,10 @@
 Resources:
   Service:
     Type: AWS::ECS::Service
-    # Properties:
-    #   Cluster: production
-    #   DesiredCount: 1
-    #   Roles: cfServiceRole
+    Properties:
+      Cluster: production
+      DesiredCount: 1
+      Roles: cfServiceRole
     #   TaskDefinition: !Ref TaskDefinition
 
   # TaskDefinition:
