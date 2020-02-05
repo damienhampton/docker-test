@@ -1,0 +1,26 @@
+Resources:
+  Service:
+    Type: AWS::ECS::Service
+    Properties:
+      Cluster: production
+      DesiredCount: 1
+      Roles: ecsServiceRole
+      TaskDefinition: !Ref TaskDefinition
+
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: Service
+      ContainerDefinitions:
+        - Name: node-test
+          Image: damienhampton/node-test
+          Memory: 128
+          PortMappings:
+            - ContainerPort: 3000
+            - HostPort: 3000
+        - Name: nginx-test
+          Image: damienhampton/nginx-test
+          Memory: 128
+          PortMappings:
+            - ContainerPort: 80
+            - HostPort: 80

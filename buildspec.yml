@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub
+      # - docker login --username="damienhampton" --password="password"
+  build:
+    commands:
+      - echo Building and tagging images
+      - docker build --tag damienhampton/node-test:latest node-test/
+      - docker build --tag damienhampton/nginx-test:latest nginx-test/
+  post_build:
+    commands:
+      - echo Pushing images to docker hub
+      # - docker push damienhampton/node-test:latest
+      # - docker push damienhampton/nginx-test:latest
+artifacts:
+  files:
+    - cfn/service.yml
+  discard-paths: yes
