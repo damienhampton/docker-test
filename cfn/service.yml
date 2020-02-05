@@ -17,10 +17,10 @@ Resources:
           Memory: 128
           PortMappings:
             - ContainerPort: 3000
-            - HostPort: 3000
+            # - HostPort: 3000
         - Name: nginx-test
           Image: damienhampton/nginx-test
           Memory: 128
           PortMappings:
             - ContainerPort: 80
-            - HostPort: 80
+            # - HostPort: 80
