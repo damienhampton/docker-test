@@ -10,12 +10,12 @@ phases:
       # - docker login --username="damienhampton" --password="password"
   build:
     commands:
-      - echo Building and tagging images
-      - docker build --tag damienhampton/node-test:latest node-test/
-      - docker build --tag damienhampton/nginx-test:latest nginx-test/
+      # - echo Building and tagging images
+      # - docker build --tag damienhampton/node-test:latest node-test/
+      # - docker build --tag damienhampton/nginx-test:latest nginx-test/
   post_build:
     commands:
-      - echo Pushing images to docker hub
+      # - echo Pushing images to docker hub
       # - docker push damienhampton/node-test:latest
       # - docker push damienhampton/nginx-test:latest
 artifacts:
