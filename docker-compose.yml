@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  nginx-test:
+    build: nginx-test/
+    ports:
+      - "80:80"
+  node-test:
+    build: node-test/
+    ports:
+      - "3000:3000"
