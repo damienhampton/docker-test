@@ -4,7 +4,7 @@ Resources:
     Properties:
       Cluster: production
       DesiredCount: 1
-      Roles: cfServiceRole
+      # Roles: cfServiceRole
     #   TaskDefinition: !Ref TaskDefinition
 
   # TaskDefinition:
